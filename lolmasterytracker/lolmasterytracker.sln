@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lolmasterytracker", "lolmasterytracker\lolmasterytracker.csproj", "{3012E0BB-654F-4610-B1F1-21E781B52E20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{3BF27ADE-5043-4526-BA94-8EDB9C6B004B}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{44CF7D61-00C2-4A66-99BC-1A8B962B83E8}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\lolmasterytracker-WAWS-dev.json = PublishScripts\Configurations\lolmasterytracker-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3012E0BB-654F-4610-B1F1-21E781B52E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3012E0BB-654F-4610-B1F1-21E781B52E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3012E0BB-654F-4610-B1F1-21E781B52E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3012E0BB-654F-4610-B1F1-21E781B52E20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{44CF7D61-00C2-4A66-99BC-1A8B962B83E8} = {3BF27ADE-5043-4526-BA94-8EDB9C6B004B}
+	EndGlobalSection
+EndGlobal

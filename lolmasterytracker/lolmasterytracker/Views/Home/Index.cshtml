@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html ng-app='lcmtApp'>
+<head>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+    <!--angular-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-resource.min.js'></script>
+
+
+    <!--App-->
+    <script src='./Scripts/lcmtApp.js'></script>
+    <script src='./Scripts/controllers/mainController.js'></script>
+    <script src='./Scripts/services/lolChampionService.js'></script>
+    <script src='./Scripts/services/settingsService.js'></script>
+    <script src='./Scripts/services/lolChampionMasteryService.js'></script>
+</head>
+
+<body ng-controller='mainController as mainCtlr'>
+    <table class="table">
+        <caption>Champions</caption>
+
+        <thead>
+            <tr>
+                <th>Champion</th>
+                <th>Current Level</th>
+                <th>Points</th>
+                <th>Points Since last level</th>
+                <th>Points until next level</th>
+                <th>Chests granted</th>
+                <th>Last play time</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="(key,value) in champions" ng-show="championMasteries[value.id]">
+                <td>
+                    {{key}}</br>
+                    <img src="http://ddragon.leagueoflegends.com/cdn/6.8.1/img/champion/{{value.image.full}}" />
+                </td>
+                <td>{{$parent.championMasteries[value.id].championLevel}}</td>
+                <td>{{$parent.championMasteries[value.id].championPoints}}</td>
+                <td>{{$parent.championMasteries[value.id].championPointsSinceLastLevel}}</td>
+                <td>{{$parent.championMasteries[value.id].championPointsUntilNextLevel}}</td>
+                <td>{{$parent.championMasteries[value.id].chestGranted}}</td>
+                <td>{{$parent.championMasteries[value.id].lastPlayTime}}</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</body>
+</html>
